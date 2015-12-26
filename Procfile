@@ -1,1 +1,1 @@
-web: iseseminar
+web: findFriends
