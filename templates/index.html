@@ -3,45 +3,35 @@
     <div class="container">
         <div class="row">
             <div class="12u">
-
                 <h1>FindFriends</h1>
                 {{if .sso}}
+
                 INTRO MIT SSO
-                <p>Dear Participant,</p>
 
-<p>thank you for participating in the evaluation of our app FindFriends.
-FindFriends is a mobile application to connect you with friends and colleagues.
-For this feature our app utilizes your location by retrieving your GPS-Information.</p>
+                <p>Lieber Teilnehmer,</p>
+                <p>vielen Dank für deine Teilnahme an der Evaluation der App “FindFriends”.</p>
+                <p>“FindFriends” ist eine mobile Anwendung um dich mit deinen Freunden und Kollegen zu vernetzen.</p>
+                <p>Um diese App zu verwenden, benötigen wir deinen Standort, den wir über GPS-Informationen deines Smartphones anfordern. Des Weiteren werden deine Freunde und Kontakte über deinen Facebook-Zugang ermittelt.</p>
 
-<p>In the following you will find FindFriends is already installed and configured on your smartphone.</p>
+                {{else}}
 
-<p>You used facebooks social login service to register yourself with FindFriends. Therefore you will notice that FindFriends is using your facebook credentials to log you in.</p>
-<p>Please consider it to be your own facebook account that is being used for the login process.</p>
-{{else}}
-INTRO OHNE SSO
-                <p>Dear Participant,</p>
+                INTRO OHNE SSO
 
-<p>thank you for participating in the evaluation of our app FindFriends.
-FindFriends is a mobile application to connect you with friends and colleagues.
-For this feature our app utilizes your location by retrieving your GPS-Information.</p>
+                <p>Lieber Teilnehmer,</p>
+                <p>vielen Dank für deine Teilnahme an der Evaluation der App “FindFriends”.</p>
+                <p>“FindFriends” ist eine mobile Anwendung um dich mit deinen Freunden und Kollegen zu vernetzen.</p>
+                <p>Um diese App zu verwenden, benötigen wir deinen Standort, den wir über GPS-Informationen deines Smartphones anfordern. Des Weiteren werden deine Freunde und Kontakte über deinen Facebook-Zugang ermittelt.</p>
 
-<p>In the following you will find FindFriends is already installed and configured on your smartphone.</p>
-
-<p>You used facebooks social login service to register yourself with FindFriends. Therefore you will notice that FindFriends is using your facebook credentials to log you in.</p>
-<p>Please consider it to be your own facebook account that is being used for the login process.</p>
-{{end}}
-
-
+                {{end}}
             </div>
         </div>
         <div class="row">
-        <div class="12u">
-<fb:login-button scope="public_profile,email" size="xlarge" onlogin="checkLoginState();">
-</fb:login-button>
-
-<div id="status">
-</div>
-</div>
+            <div class="12u">
+                <fb:login-button scope="public_profile,email" size="xlarge" onlogin="checkLoginState();">
+                </fb:login-button>
+                <div id="status">
+                </div>
+            </div>
         </div>
     </div>
 </section>
