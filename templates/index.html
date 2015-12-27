@@ -1,28 +1,15 @@
 {{define "body"}}
 <section class="wrapper style1" id="content">
     <div class="container">
+                {{if .sso}}
         <div class="row">
             <div class="12u">
                 <h1>FindFriends</h1>
-                {{if .sso}}
-
-                INTRO MIT SSO
-
                 <p>Lieber Teilnehmer,</p>
                 <p>vielen Dank für deine Teilnahme an der Evaluation der App “FindFriends”.</p>
                 <p>“FindFriends” ist eine mobile Anwendung um dich mit deinen Freunden und Kollegen zu vernetzen.</p>
                 <p>Um diese App zu verwenden, benötigen wir deinen Standort, den wir über GPS-Informationen deines Smartphones anfordern. Des Weiteren werden deine Freunde und Kontakte über deinen Facebook-Zugang ermittelt.</p>
 
-                {{else}}
-
-                INTRO OHNE SSO
-
-                <p>Lieber Teilnehmer,</p>
-                <p>vielen Dank für deine Teilnahme an der Evaluation der App “FindFriends”.</p>
-                <p>“FindFriends” ist eine mobile Anwendung um dich mit deinen Freunden und Kollegen zu vernetzen.</p>
-                <p>Um diese App zu verwenden, benötigen wir deinen Standort, den wir über GPS-Informationen deines Smartphones anfordern. Des Weiteren werden deine Freunde und Kontakte über deinen Facebook-Zugang ermittelt.</p>
-
-                {{end}}
             </div>
         </div>
         <div class="row">
@@ -33,6 +20,25 @@
                 </div>
             </div>
         </div>
+
+                {{else}}
+
+        <div class="row">
+            <div class="12u">
+                <h1>FindFriends</h1>
+                <p>Lieber Teilnehmer,</p>
+                <p>vielen Dank für deine Teilnahme an der Evaluation der App “FindFriends”.</p>
+                <p>“FindFriends” ist eine mobile Anwendung um dich mit deinen Freunden und Kollegen zu vernetzen.</p>
+                <p>Um diese App zu verwenden, benötigen wir deinen Standort, den wir über GPS-Informationen deines Smartphones anfordern. </p>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="12u">
+                <a href="{{.url}}">Fortfahren zu FindFriends</a>
+            </div>
+        </div>
+                {{end}}
     </div>
 </section>
 {{end}}
