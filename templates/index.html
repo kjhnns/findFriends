@@ -1,68 +1,85 @@
 {{define "body"}}
 <section class="wrapper style1" id="content">
     <div class="container">
-                {{if .sso}}
+        {{if .sso}}
         <div class="row">
             <div class="12u">
                 <h1>FindFriends</h1>
-                <p>Lieber Teilnehmer,</p>
-                <p>vielen Dank für deine Teilnahme an der Evaluation der App “FindFriends”.</p>
-                <p>“FindFriends” ist eine mobile Anwendung um dich mit deinen Freunden und Kollegen zu vernetzen.</p>
-                <p>Um diese App zu verwenden, benötigen wir deinen Standort, den wir über GPS-Informationen deines Smartphones anfordern. Des Weiteren werden deine Freunde und Kontakte über deinen Facebook-Zugang ermittelt.</p>
-
+                <p>Dear participant,</p>
+                <p>thank you for evaluating the app „FindFriends“.</p>
+                <p>„FindFriends“ is a mobile application to share connect you with your closest friends and colleagues.</p>
+                <p>In order to access all features of „FindFriends“ we need your current location.</p>
+                By disclosing your smartphones GPS-data we can access your location and share it with your friends.
+                <p>To test the application please create an account.</p>
             </div>
         </div>
         <div class="row">
             <div class="12u">
-                <fb:login-button scope="public_profile,email" size="xlarge" onlogin="checkLoginState();">
-                </fb:login-button>
-                <div id="status">
+                <div style="border: 1px #000 solid; width: 884px">
+                    <img src="/public/images/bar.png" alt="" />
+                    <div class="_1bx-"><span class="fwb">FindFriends</span> will receive the following info: your public profile and email address. <a data-hover="tooltip" aria-label="Your public profile includes name, profile picture, age range, gender, language, country and other public info" href="#" role="button"><i class="img sp_jeutf7mKz4L sx_54c0d3"></i></a></div><span class="_1bx_" href="#" role="button" id="u_0_4">Edit the info you provide</span></div>
+                <div class="_2_bh">
+                    <div class="pam uiBoxWhite noborder">
+                        <table class="uiGrid _51mz" cellspacing="0" cellpadding="0" width="100%">
+                            <tbody>
+                                <tr class="_51mx">
+                                    <td class="_51m- uiOverlayFooterMessage"></td>
+                                    <td class="_51m- uiOverlayFooterButtons _51mw">
+                                        <button value="1" class="_42ft _4jy0 layerConfirm _4jy5 _517h _51sy" name="__CANCEL__" type="submit">Cancel</button>
+                                        <button value="1" class="_42ft _4jy0 layerConfirm _51_n autofocus _4jy5 _4jy1 selected _51sy" type="submit">Okay</button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
         </div>
-
-                {{else}}
-
-        <div class="row">
-            <div class="12u">
-                <h1>FindFriends</h1>
-                <p>Lieber Teilnehmer,</p>
-                <p>vielen Dank für deine Teilnahme an der Evaluation der App “FindFriends”.</p>
-                <p>“FindFriends” ist eine mobile Anwendung um dich mit deinen Freunden und Kollegen zu vernetzen.</p>
-                <p>Um diese App zu verwenden, benötigen wir deinen Standort, den wir über GPS-Informationen deines Smartphones anfordern. </p>
-
-            </div>
+    </div>
+    {{else}}
+    <div class="row">
+        <div class="12u">
+            <h1>FindFriends</h1>
+            <p>Dear participant,</p>
+            <p>thank you for evaluating the app „FindFriends“.</p>
+            <p>„FindFriends“ is a mobile application to share connect you with your closest friends and colleagues.</p>
+            <p>In order to access all features of „FindFriends“ we need your current location.</p>
+            By disclosing your smartphones GPS-data we can access your location and share it with your friends.
+            <p>To test the application please create an account.</p>
         </div>
-            <form action="{{.url}}" method="get">
+    </div>
+    <form action="{{.url}}" method="get">
         <div class="row">
             <div class="4u">
-            <label>E-Mail Adresse
-            <input type="email"/></label>
+                <label>E-Mail Address
+                    <input type="email" />
+                </label>
             </div>
             <div class="4u">
-                Zum Testen der Applikation müssen Sie sich vorab ein Konto auf FindFriends erstellen.
-            </div>
-        </div>
-        <div class="row">
-            <div class="4u">
-            <label>Vor- und Nachname
-            <input type="text"/></label>
+                To test the application please create an account.
             </div>
         </div>
         <div class="row">
             <div class="4u">
-            <label>Passwort
-            <input type="password" /></label>
+                <label>First and Last Name
+                    <input type="text" />
+                </label>
             </div>
         </div>
-
         <div class="row">
             <div class="4u">
-            <input type="submit" value="Registrierung"/>
+                <label>Password
+                    <input type="password" />
+                </label>
             </div>
         </div>
-            </form>
-                {{end}}
+        <div class="row">
+            <div class="4u">
+                <input type="submit" value="Register" />
+            </div>
+        </div>
+    </form>
+    {{end}}
     </div>
 </section>
 {{end}}
