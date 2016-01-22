@@ -15,24 +15,29 @@
         </div>
         <div class="row">
             <div class="12u">
-                <div style="border: 1px #000 solid; width: 884px">
-                    <img src="/public/images/bar.png" alt="" />
-                    <div class="_1bx-"><span class="fwb">FindFriends</span> will receive the following info: your public profile and email address. <a data-hover="tooltip" aria-label="Your public profile includes name, profile picture, age range, gender, language, country and other public info" href="#" role="button"><i class="img sp_jeutf7mKz4L sx_54c0d3"></i></a></div><span class="_1bx_" href="#" role="button" id="u_0_4">Edit the info you provide</span></div>
-                <div class="_2_bh">
-                    <div class="pam uiBoxWhite noborder">
-                        <table class="uiGrid _51mz" cellspacing="0" cellpadding="0" width="100%">
-                            <tbody>
-                                <tr class="_51mx">
-                                    <td class="_51m- uiOverlayFooterMessage"></td>
-                                    <td class="_51m- uiOverlayFooterButtons _51mw">
-                                        <button value="1" class="_42ft _4jy0 layerConfirm _4jy5 _517h _51sy" name="__CANCEL__" type="submit">Cancel</button>
-                                        <button value="1" class="_42ft _4jy0 layerConfirm _51_n autofocus _4jy5 _4jy1 selected _51sy" type="submit">Okay</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                <form action="{{.url}}" method="get">
+                    <div style="border: 1px #CCC solid; width: 442px">
+                        <img src="/public/images/bar.png" style="width: 442px" alt="" />
+                        <div style="font-size: 14px; text-align: center; padding: 30px 5px;">
+                            <span style="font-weight: 400">FindFriends</span> will receive the following info: your public profile and email address.
+                        </div>
+                        <div class="_2_bh">
+                            <div class="pam uiBoxWhite noborder">
+                                <table class="uiGrid _51mz" style="margin: 0" cellspacing="0" cellpadding="0" width="100%">
+                                    <tbody>
+                                        <tr class="_51mx">
+                                            <td class="_51m- uiOverlayFooterMessage" style="width: 60%"></td>
+                                            <td class="_51m- uiOverlayFooterButtons _51mw">
+                                                <button value="1" class="uibutton large" name="__CANCEL__" type="submit">Cancel</button>
+                                                <button value="1" class="uibutton large confirm" type="submit">Okay</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
